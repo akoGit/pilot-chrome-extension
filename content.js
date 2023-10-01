@@ -72,6 +72,7 @@ function parsePageContent() {
     for (let i = 0; i < tabs.length; ++i) {
 
       let tabId = tabs[i].id;
+      //  setTimeout(() => { --this doesn't work
 
       chrome.scripting.executeScript(
         {
@@ -82,6 +83,7 @@ function parsePageContent() {
         },
 
       );
+      // }, 4000)
     }
   })
 }
