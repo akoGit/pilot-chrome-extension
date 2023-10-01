@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    block-size: 100%;
+}
+
+body {
+    min-block-size: 100%;
+    width: 25rem;
+    height: 30rem;
+    display: grid;
+    place-items: center;
+    background-color: black;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    font-feature-settings: "smcp", "zero";
+}
+
+main {
+    position: relative;
+}
+
+#myButton {
+    padding: 1rem;
+    cursor: pointer;
+}
+
+section {
+    margin-bottom: .5rem;
+}
+
+.time_spent {
+    border-bottom: 1px solid rgba(128, 128, 128, 0.411);
+}
+
+.time_spent .daily_average {
+    font-weight: bold;
+}
+
+.time_spent>h2 {
+    font-weight: bold;
+    margin-bottom: 1rem;
+    /* font-size: 1rem; */
+}
+
+.time_spent .hours {
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.time_spent .wrap_stats {
+    display: grid;
+    place-items: center;
+}
+
+.wrap_stats>p {
+    font-weight: bold;
+    color: grey;
+    margin-top: .3rem;
+}
+
+.remainders {
+    /* cursor: pointer; */
+    /* position: relative; */
+    z-index: -1;
+}
+
+.remainders>h2 {
+    margin-bottom: 1rem;
+}
+
+.time_config {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.time_config>.time_value {
+    font-weight: bold;
+
+}
+
+.time_config p {
+    font-weight: bold;
+    color: grey;
+}
+
+
+
+/* remainders_config css */
+.remainders_config {
+    width: 25rem;
+    height: 10rem;
+    margin: 0 auto;
+    text-align: center;
+    background-color: black;
+    /* z-index: 10; */
+    color: white;
+    position: fixed;
+    bottom: 135px;
+    right: 0px;
+    display: none;
+}
+
+.remainders_config.active {
+    display: block;
+}
+
+.wrap_options>.submit_btn {
+    all: unset;
+    font-weight: bolder;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #262626;
+    padding: .8rem;
+}
+
+.remainders_config>.wrap_done_btn {
+    width: auto;
+    background-color: #262626;
+    text-align: center;
+    padding: .8rem;
+    cursor: pointer;
+}
+
+.wrap_done_btn>.done_btn {
+    all: unset;
+    font-weight: bolder;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.remainders_config .wrap_heading {
+    background-color: #262626;
+    padding: .7rem;
+    padding-bottom: 1rem;
+    border-top-left-radius: 10px 10px;
+    border-top-right-radius: 10px 10px;
+    margin-bottom: 1rem;
+}
+
+.wrap_heading {
+    font-weight: bold;
+}
+
+.wrap_remain_config .wrap_options {
+    display: flex;
+    flex-direction: column;
+    /* text-align: left; */
+
+}
+
+.wrap_remain_config {
+    padding: .5rem;
+    background-color: black;
+}
+
+.wrap_remain_config>p {
+    color: grey;
+    text-align: left;
+    margin-left: 0.5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+}
+
+.wrap_remain_config .wrap_boxes {
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem;
+    cursor: pointer;
+}
+
+.wrap_boxes>label {
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 1rem;
+}

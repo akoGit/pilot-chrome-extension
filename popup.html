@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="/content.js" defer></script>
+  <link rel="stylesheet" href="popup.css ">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="myButton">click test</button>
+  <main>
+    <section class="time_spent">
+      <h2>Time on Chrome</h2>
+      <div class="wrap_stats">
+
+        <span class="hours">1h27m</span>
+        <span class="daily_average">Daily Average</span>
+        <p>Average time you spent per day using the <br> Chrome Browser on this device last week</p>
+        <div class="diagram"><img src="/images/mock_diagram.png"></div>
+
+      </div>
+    </section>
+
+    <section class="remainders">
+      <!-- toggle this element -->
+      <!-- toggle end -->
+
+      <h2>Manage your Time</h2>
+      <div class="time_config">
+        <div class="wrap_texts">
+
+          <h4>Set reminder to take breaks</h4>
+          <p>Schedule a reminder to take regular <br> breaks from browsing</p>
+        </div>
+        <div class="time_value">10m &#10097;</div>
+      </div>
+    </section>
+    <!-- toggle -->
+    <div class="remainders_config">
+      <div class="wrap_heading">
+        <h2>Reminder to take breaks</h2>
+      </div>
+      <div class="wrap_remain_config">
+        <p>We'll remind you to take a brake when you spend <br>
+          this amount of time at once browsing</p>
+        <form class="wrap_options" id="custom_form">
+
+          <div class="wrap_boxes" id="checkbox_1">
+            <label for="checkboxOne">Every 10 minutes</label> <input type="radio" name="interval" id="checkboxOne">
+          </div>
+          <div class="wrap_boxes">
+            <label for="checkboxTwo">Every 20 minutes</label> <input type="radio" name="interval" id="checkboxTwo">
+          </div>
+          <div class="wrap_boxes" for="checkboxThree">
+            <label for="checkboxThree">Every 30 minutes</label> <input type="radio" name="interval" id="checkboxThree">
+          </div>
+          <div class="wrap_boxes">
+            <label for="numberInput">Custom time</label>
+            <input type="number" name="numberInput" id="number_input" min="0" max="120">
+          </div>
+          <button type="submit" class="submit_btn">Done</button>
+        </form>
+      </div>
+      <!-- <div class="wrap_done_btn"> <button class="done_btn">Done</button> -->
+    </div>
+    </div>
+
+  </main>
+</body>
+
+</html>
