@@ -68,22 +68,20 @@ doneBtn.addEventListener("click", () => {
 
 
 function parsePageContent() {
-  chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-    for (let i = 0; i < tabs.length; ++i) {
+  setTimeout(() => {
+    chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
 
-      let tabId = tabs[i].id;
-      //  setTimeout(() => { --this doesn't work
+      let tabId = tabs[0].id;
 
       chrome.scripting.executeScript(
         {
           target: { tabId: tabId },
           function: () => {
-            setTimeout(displayNotif, 4000)
+            displayNotif()
           },
         },
 
       );
-      // }, 4000)
-    }
-  })
+    })
+  }, 4000)
 }
