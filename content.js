@@ -42,7 +42,7 @@ function displayNotif() {
   })
 }
 
-form.addEventListener('submit', (e) => {
+form?.addEventListener('submit', (e) => {
   e.preventDefault()
   const data = new FormData(e.target)
   const name = data.get("numberInput")
@@ -55,33 +55,14 @@ form.addEventListener('submit', (e) => {
 
 
 
-remainders.addEventListener('click', () => {
+remainders?.addEventListener('click', () => {
   activateRemainder.classList.toggle('active')
 })
 
 
-doneBtn.addEventListener("click", () => {
+doneBtn?.addEventListener("click", () => {
   activateRemainder.classList.toggle('active')
   parsePageContent()
 })
 
 
-
-function parsePageContent() {
-  setTimeout(() => {
-    chrome.tabs.query({ currentWindow: true, active: true }, function (tabs) {
-
-      let tabId = tabs[0].id;
-
-      chrome.scripting.executeScript(
-        {
-          target: { tabId: tabId },
-          function: () => {
-            displayNotif()
-          },
-        },
-
-      );
-    })
-  }, 4000)
-}
